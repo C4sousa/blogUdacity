@@ -1,13 +1,124 @@
-.container{
-    display:grid;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 250px 600px;
-    /* grid-template-columns: repeat(3, 1fr); */
-    /* Initially each element has its own row for small screens */
-    grid-template-areas: 
-    "hd"
-    "sd"
-    "main"
-    "ft";
-    border: 2px solid yellow;
-  }
+.container {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: lighter;
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+  "hd hd hd hd"
+  "sd title title title"
+  "sd post1 post2 post3"
+  "ft ft ft ft";
+}
+
+
+.header {
+  padding: 20px;
+  border-radius: 2px;
+  font-size: 30px;
+  grid-area: hd;
+}
+
+.nav {
+  grid-area: sd;
+}
+
+.nav a {
+  color: #02B3E4;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  color: #02B3E4;
+  background-color: white;
+  border: 1px solid;
+  border-radius: 3px;
+  padding: 5px 15px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none; 
+}
+
+button {
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #02B3E4;;
+  color: white;
+}
+
+
+.title {
+  font-size: 12px;
+  grid-area: title;
+}
+
+.post1 {
+  background-color: rgb(228, 228, 228) ;
+  border-radius: 5px;   
+  grid-area: post1;
+}
+
+.post2 {
+  background-color: rgb(228, 228, 228) ;
+  border-radius: 5px;   
+  grid-area: post2;
+}
+
+.post3 {
+  background-color: rgb(228, 228, 228) ;
+  border-radius: 5px;   
+  grid-area: post3;
+}
+
+h3{
+  font-size: 20px;
+  color: black;
+  padding: 20px;
+  border-radius: 2px;
+}  
+
+h3:hover {
+  color: #02B3E4;;
+}
+
+
+p{
+  padding: 20px;
+  border-radius: 2px;
+  font-size: 10px;
+}
+
+.footer {
+  color: white;
+  background-color: grey ;
+  border-radius: 5px;   
+  grid-area: ft;
+  vertical-align: text-top;
+}
+
+.footer p{
+  color:yellow;
+  vertical-align:25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+
+
+
